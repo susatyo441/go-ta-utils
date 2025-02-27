@@ -254,6 +254,16 @@ func NewAdminService[T any](collection string, opts ...BaseServiceOptions) *Base
 	}
 }
 
+func ShopVisionService[T any](collection string, opts ...BaseServiceOptions) *BaseService[T] {
+	db.ConnectToAdminDb()
+	coll := db.GetCollection(collection)
+
+	return &BaseService[T]{
+		collection: coll,
+		options:    determineOptions(defaultBaseServiceOptions, opts...),
+	}
+}
+
 func NewGlobalService[T any](collection string, opts ...BaseServiceOptions) *BaseService[T] {
 	db.ConnectToGlobalDb()
 	coll := db.GetCollection(collection)

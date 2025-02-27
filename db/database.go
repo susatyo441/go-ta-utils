@@ -71,6 +71,11 @@ func ConnectToAdminDb() {
 	dbName = "admin_tagsamurai"
 }
 
+func ConnectToShopVisionDb() {
+	Client = ConnectMongo()
+	dbName = "shop_vision"
+}
+
 func GetCollection(collection string) *mongo.Collection {
 	return Client.Database(dbName).Collection(collection)
 }
