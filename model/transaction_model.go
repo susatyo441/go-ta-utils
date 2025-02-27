@@ -13,6 +13,7 @@ type Transaction struct {
 	Quantity   int                `json:"quantity"          bson:"quantity"`
 	Price      int                `json:"price"          bson:"price"`
 	TotalPrice int                `json:"totalPrice"          bson:"totalPrice"`
+	StoreID    primitive.ObjectID `json:"storeId"        bson:"storeId"`
 
 	CreatedAt time.Time `json:"createdAt"            bson:"createdAt"`
 	UpdatedAt time.Time `json:"updatedAt"            bson:"updatedAt"`

@@ -17,6 +17,7 @@ type Changelog struct {
 	Object       string             `json:"object"        bson:"object"`
 	ObjectId     primitive.ObjectID `json:"objectId"      bson:"objectId"`
 	ObjectName   string             `json:"objectName"    bson:"objectName"`
+	StoreID      primitive.ObjectID `json:"storeId"        bson:"storeId"`
 	CreatedAt    time.Time          `json:"createdAt"     bson:"createdAt"`
 	UpdatedAt    time.Time          `json:"updatedAt"     bson:"updatedAt"`
 }
