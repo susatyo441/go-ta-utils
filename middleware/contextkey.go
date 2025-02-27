@@ -7,5 +7,5 @@ const (
 	UserKey        = ContextKey("user")
 	CompanyCodeKey = ContextKey("companyCode")
 	SessionKey     = ContextKey("session")
-	Store          = ContextKey("store")
+	StoreKey       = ContextKey("store")
 )

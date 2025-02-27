@@ -36,19 +36,14 @@ func ValidateJWT() fiber.Handler {
 		}
 
 		if claims, ok := token.Claims.(jwt.MapClaims); ok && token.Valid {
-			if claims["id"] == nil || claims["companyCode"] == nil {
-				return fiber.NewError(fiber.StatusUnauthorized, "Invalid token")
-			}
 
-			companyCode := claims["companyCode"].(string)
 			userId, _ := primitive.ObjectIDFromHex(claims["id"].(string))
 			session, _ := primitive.ObjectIDFromHex(claims["session"].(string))
 			store, _ := primitive.ObjectIDFromHex(claims["store"].(string))
 
 			ctx.Locals(UserKey, userId)
 			ctx.Locals(SessionKey, session)
-			ctx.Locals(CompanyCodeKey, companyCode)
-			ctx.Locals(Store, store)
+			ctx.Locals(StoreKey, store)
 
 		} else {
 			return fiber.NewError(fiber.StatusUnauthorized, "Unauthorized")
