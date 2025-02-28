@@ -255,7 +255,7 @@ func NewAdminService[T any](collection string, opts ...BaseServiceOptions) *Base
 }
 
 func ShopVisionService[T any](collection string, opts ...BaseServiceOptions) *BaseService[T] {
-	db.ConnectToAdminDb()
+	db.ConnectToShopVisionDb()
 	coll := db.GetCollection(collection)
 
 	return &BaseService[T]{
