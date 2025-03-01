@@ -12,6 +12,7 @@ type Product struct {
 	Category   AttributeEmbedded  `json:"category"            bson:"category"`
 	CoverPhoto string             `json:"coverPhoto" bson:"coverPhoto"`
 	Stock      int                `json:"stock" bson:"stock"`
+	Price      int                `json:"price" bson:"price"`
 	StoreID    primitive.ObjectID `json:"storeId"        bson:"storeId"`
 
 	CreatedAt time.Time `json:"createdAt"            bson:"createdAt"`
