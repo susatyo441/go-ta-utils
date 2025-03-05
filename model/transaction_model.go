@@ -7,11 +7,12 @@ import (
 )
 
 type TransactionProductAttribute struct {
-	ID       primitive.ObjectID `json:"_id,omitempty"        bson:"_id,omitempty"`
-	Name     string             `json:"name"            bson:"name"`
-	Price    int                `json:"price"          bson:"price"`
-	Category AttributeEmbedded  `json:"category"            bson:"category"`
-	Quantity int                `json:"quantity"          bson:"quantity"`
+	ID         primitive.ObjectID `json:"_id,omitempty"        bson:"_id,omitempty"`
+	Name       string             `json:"name"            bson:"name"`
+	Price      int                `json:"price"          bson:"price"`
+	Category   AttributeEmbedded  `json:"category"            bson:"category"`
+	Quantity   int                `json:"quantity"          bson:"quantity"`
+	TotalPrice int                `json:"totalPrice"          bson:"totalPrice"`
 }
 
 type Transaction struct {
