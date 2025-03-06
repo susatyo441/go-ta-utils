@@ -14,6 +14,7 @@ type Product struct {
 	Stock      int                `json:"stock" bson:"stock"`
 	Price      int                `json:"price" bson:"price"`
 	StoreID    primitive.ObjectID `json:"storeId"        bson:"storeId"`
+	CapitalPrice *int			  `json:"capitalPrice" bson:"capitalPrice"`
 
 	CreatedAt time.Time `json:"createdAt"            bson:"createdAt"`
 	UpdatedAt time.Time `json:"updatedAt"            bson:"updatedAt"`
