@@ -8,4 +8,6 @@ const (
 	UserModelName         = "users"
 	ProductPhotoModelName = "product_photos"
 	ChangelogModelName    = "change_logs"
+	QuestionerModelName   = "questioners"
+	CreditModelName       = "credits"
 )
